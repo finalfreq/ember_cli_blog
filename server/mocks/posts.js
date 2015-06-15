@@ -26,13 +26,15 @@ var posts = [
     id: 1,
     title: 'bananas',
     author: 1,
+    date: new Date(2015, 5, 4, 6, 0, 0),
     body: 'I am banana'
   },
   {
     id: 2,
     title: 'Apples',
     author: 1,
-    body: "my spoon is to big"
+    date: new Date(2015, 5, 4, 6, 0, 0),
+    body: "my *spoon* is to ```big```"
   }
 ];
 

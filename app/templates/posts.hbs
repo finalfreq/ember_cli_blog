@@ -1,17 +1,22 @@
 <h1>OMG posts!!!</h1>
 
+<div class='col-md-4'>
+  <p>
+   All the posts
+  </p>
+  <ul>
+    {{#each model as |post|}}
 
-<p>
- All the posts
-</p>
-<ul>
-  {{#each model as |post|}}
+      <li>
+        {{#link-to 'post' post}}
+          {{post.title}} <span class="muted">by {{post.author.name}}</span>
+        {{/link-to}}
+      </li>
 
-    <li>
-      {{#link-to 'post' post}}
-        {{post.title}} <span class="muted">by {{post.author.name}}</span>
-      {{/link-to}}
-    </li>
+    {{/each}}
+  </ul>
+</div>
 
-  {{/each}}
-</ul>
+<div class="col-md-8">
+  {{outlet}}
+</div>
