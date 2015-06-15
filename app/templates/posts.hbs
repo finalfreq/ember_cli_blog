@@ -1,0 +1,17 @@
+<h1>OMG posts!!!</h1>
+
+
+<p>
+ All the posts
+</p>
+<ul>
+  {{#each model as |post|}}
+
+    <li>
+      {{#link-to 'post' post}}
+        {{post.title}} <span class="muted">by {{post.author.name}}</span>
+      {{/link-to}}
+    </li>
+
+  {{/each}}
+</ul>
